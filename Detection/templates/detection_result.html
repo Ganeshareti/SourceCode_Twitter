@@ -1,0 +1,32 @@
+{%include "uheader.html" %}
+<div class="breadcrumb-agile py-1">
+		<ol class="breadcrumb m-0">
+			<li class="breadcrumb-item">
+				<a href="">Twitter Spam Detection </a>
+			</li>
+			<li class="breadcrumb-item active" aria-current="page"></li>
+		</ol>
+	</div>
+	<section class="logins py-5">
+		<div class="container py-xl-5 py-lg-3">
+			<div class="login px-sm-4 mx-auto mw-100 login-wrapper">
+				 <h2 class="w3ls-title text-uppercase text-dark font-weight-bold">Tweet:<br></h2>
+				<br><font size="+2">{{tweet}}</font> <br> <br> <br>
+
+
+
+
+			</div>
+			<div class="title-section mb-md-5 mb-4">
+				{% if result=='spam' %}
+				<h3 class="w3ls-title text-uppercase text-dark font-weight-bold">&nbsp;&nbsp;Detection Result: <font color="red">{{result}}</font></h3>
+				{% else %}
+				<h3 class="w3ls-title text-uppercase text-dark font-weight-bold">&nbsp;&nbsp;Detection Result: <font color="blue">{{result}}</font></h3>
+				{% endif %}
+			</div>
+
+		</div>
+	</section>
+	<!-- //login -->
+
+{%include "footer.html" %}
